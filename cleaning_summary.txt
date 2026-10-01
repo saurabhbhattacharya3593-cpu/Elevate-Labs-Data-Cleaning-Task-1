@@ -1,0 +1,50 @@
+ELEVATE LABS — TASK 1: DATA CLEANING SUMMARY
+Dataset: Netflix Movies and TV Shows
+Original Kaggle source: https://www.kaggle.com/datasets/shivamb/netflix-shows
+
+Raw dimensions: 8807 rows x 12 columns
+Exact duplicate rows removed: 0
+Cleaned dimensions: 8807 rows x 14 columns
+Duplicate rows remaining: 0
+
+Missing values BEFORE cleaning:
+show_id            0
+type               0
+title              0
+director        2634
+cast             825
+country          831
+date_added        10
+release_year       0
+rating             4
+duration           3
+listed_in          0
+description        0
+
+Missing values AFTER cleaning:
+show_id              0
+type                 0
+title                0
+director             0
+cast                 0
+country              0
+date_added          10
+release_year         0
+rating               0
+duration             3
+listed_in            0
+description          0
+duration_value    2679
+duration_unit     2679
+
+Steps performed:
+1. Standardized headers to lowercase and underscores.
+2. Trimmed text whitespace and treated blank strings as missing.
+3. Removed exact duplicate rows.
+4. Converted date_added to datetime.
+5. Converted release_year to nullable integer.
+6. Standardized type and rating labels.
+7. Extracted duration_value and duration_unit from duration.
+8. Replaced missing director, cast, country, and rating with 'Unknown'.
+9. Preserved missing dates and durations rather than guessing values.
+10. Exported netflix_cleaned.csv.
